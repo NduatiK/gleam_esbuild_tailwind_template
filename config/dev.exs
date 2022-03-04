@@ -25,7 +25,8 @@ config :bookay, BookayWeb.Endpoint,
   secret_key_base: "a0/fsVhYbS6YTmIelxGBLI4/IVeedZ8jdUcmj3QLDYA3aI39HgEWUEjeOzofcxeq",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
